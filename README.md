@@ -1,7 +1,7 @@
+Terima kasih, Thank you kepada bro @lychengrex yang sudah memberikan arahan project ini melalui akun githubnya
+
+
 # denoise_app
-
-A new Flutter project.
-
 ## Getting Started
 
 This project is a starting point for a Flutter application.
