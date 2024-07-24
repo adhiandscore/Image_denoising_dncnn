@@ -54,7 +54,8 @@ instalasi server Google Colab
 
    #periksa keys untuk membuka check point
    print(checkpoint['Net'].keys())
-11. copy paste skrip flask yang ada pada main folder ini untuk menjalankan backbone model di server google colab
+   
+   copy paste skrip flask yang ada pada main folder ini untuk menjalankan backbone model di server google colab
     
 
     
