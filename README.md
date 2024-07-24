@@ -31,11 +31,11 @@ instalasi server Google Colab
 3. siapkan file checkpoint, biasanya setelah melalui training, anda akan mendapatkan file checkpoint yang berisi bobot pelatihan,
    jika anda belum sempat untuk memulai pelatihan, anda bisa menggunakan file checkpoint yang tersedia di main folder ini 
 5. jalan kan perintah berikut :
-   a. !git clone https://github.com/lychengr3x/Image-Denoising-with-Deep-CNNs.git,
-   b. cd Image-Denoising-with-Deep-CNNs,
-   c. cd src,
-   d. !pip install pyngrok
-6. jalankan perintah untuk mendapatkan authtoken untuk mengakses server tunneling ngrok.
+6. !git clone https://github.com/lychengr3x/Image-Denoising-with-Deep-CNNs.git,
+7. cd Image-Denoising-with-Deep-CNNs,
+8. cd src,
+9. !pip install pyngrok
+10. jalankan perintah untuk mendapatkan authtoken untuk mengakses server tunneling ngrok.
 
    import getpass
    from pyngrok import ngrok, conf
@@ -43,10 +43,10 @@ instalasi server Google Colab
    print("Masukkan auth token, harus login ke   https://dashboard.ngrok.com/auth")
    conf.get_default().auth_token = getpass.getpass()
 
-7. instalasi flask : 
+11. instalasi flask : 
    !pip install flask flask_cors
 
-8. import checkpoint
+12. import checkpoint
    import torch
 
    checkpoint_path ='/alamat/ke/checkpoint.pth'
@@ -54,7 +54,7 @@ instalasi server Google Colab
 
    #periksa keys untuk membuka check point
    print(checkpoint['Net'].keys())
-9. copy paste skrip flask yang ada pada main folder ini untuk menjalankan backbone model di server google colab
+11. copy paste skrip flask yang ada pada main folder ini untuk menjalankan backbone model di server google colab
     
 
     
