@@ -28,12 +28,14 @@ instalasi mobile
 instalasi server Google Colab
 1. buka google colab notebook
 2. sambungkan dengan runtime cpu atau GPU jika tersedia
-3. jalan kan perintah berikut :
-   a. !git clone https://github.com/lychengr3x/Image-Denoising-with-Deep-    CNNs.git
+3. siapkan file checkpoint, biasanya setelah melalui training, anda akan mendapatkan file checkpoint yang berisi bobot pelatihan,
+   jika anda belum sempat untuk memulai pelatihan, anda bisa menggunakan file checkpoint yang tersedia di main folder ini 
+5. jalan kan perintah berikut :
+   a. !git clone https://github.com/lychengr3x/Image-Denoising-with-Deep-CNNs.git
    b. cd Image-Denoising-with-Deep-CNNs
    c. cd src
    d. !pip install pyngrok
-4. jalankan perintah untuk mendapatkan authtoken untuk mengakses server tunneling ngrok.
+6. jalankan perintah untuk mendapatkan authtoken untuk mengakses server tunneling ngrok.
 
    import getpass
    from pyngrok import ngrok, conf
@@ -41,10 +43,10 @@ instalasi server Google Colab
    print("Masukkan auth token, harus login ke   https://dashboard.ngrok.com/auth")
 conf.get_default().auth_token = getpass.getpass()
 
-5. instalasi flask : 
+7. instalasi flask : 
    !pip install flask flask_cors
 
-6. import checkpoint
+8. import checkpoint
    import torch
 
    checkpoint_path ='/alamat/ke/checkpoint.pth'
@@ -52,7 +54,7 @@ conf.get_default().auth_token = getpass.getpass()
 
    #periksa keys untuk membuka check point
    print(checkpoint['Net'].keys())
-7. #copy paste skrip flask ini untuk menjalankan backbone model di server google colab
+9. #copy paste skrip flask ini untuk menjalankan backbone model di server google colab
 
 import os
 import numpy as np
@@ -145,7 +147,7 @@ device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 model = model.to(device)
 optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
 
-checkpoint_path = '/content/Image-Denoising-with-Deep-CNNs/src/checkpoint2.pth.tar'
+checkpoint_path = '/content/Image-Denoising-with-Deep-CNNs/src/(nama checkpoint anda).pth.tar'
 checkpoint = torch.load(checkpoint_path, map_location=device)
 model.load_state_dict(checkpoint['Net'])
 optimizer.load_state_dict(checkpoint['Optimizer'])
