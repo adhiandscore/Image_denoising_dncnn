@@ -24,6 +24,9 @@ Proses instalasi dibagi menjadi 3 bagian, instalasi mobile (flutter), instalasi 
 instalasi mobile 
 1. Download flutter SDK dari www.flutter.dev kemudian install sesuai petunjuk
 2. Instalasi code editor
+3. buka file main.dart
+4. cari file yang bernama final url = Uri.parse(
+        'publicUrlAnda/endpoint'); 
 
 instalasi server Google Colab
 1. buka google colab notebook
