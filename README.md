@@ -31,17 +31,17 @@ instalasi server Google Colab
 3. siapkan file checkpoint, biasanya setelah melalui training, anda akan mendapatkan file checkpoint yang berisi bobot pelatihan,
    jika anda belum sempat untuk memulai pelatihan, anda bisa menggunakan file checkpoint yang tersedia di main folder ini 
 5. jalan kan perintah berikut :
-   a. !git clone https://github.com/lychengr3x/Image-Denoising-with-Deep-CNNs.git
-   b. cd Image-Denoising-with-Deep-CNNs
-   c. cd src
-   d. !pip install pyngrok
+a. !git clone https://github.com/lychengr3x/Image-Denoising-with-Deep-CNNs.git
+b. cd Image-Denoising-with-Deep-CNNs
+c. cd src
+d. !pip install pyngrok
 6. jalankan perintah untuk mendapatkan authtoken untuk mengakses server tunneling ngrok.
 
    import getpass
    from pyngrok import ngrok, conf
 
    print("Masukkan auth token, harus login ke   https://dashboard.ngrok.com/auth")
-conf.get_default().auth_token = getpass.getpass()
+   conf.get_default().auth_token = getpass.getpass()
 
 7. instalasi flask : 
    !pip install flask flask_cors
