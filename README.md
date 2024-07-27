@@ -27,7 +27,7 @@ instalasi mobile
 3. buka file main.dart
 4. cari kode yang bernama final url = Uri.parse(
         'publicUrlAnda/endpoint');
-pastikan anda mengganti publicUrlAnda dengan url yang disediakan pada ngrok pada google colab setelah menjalankan perintah authtoken
+pastikan anda mengganti publicUrlAnda dengan url yang disediakan pada ngrok pada google colab setelah menjalankan perintah authtoken, dna ganti juga endpoint dengan 'upload'
 
 instalasi server Google Colab
 1. buka google colab notebook
