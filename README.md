@@ -25,8 +25,9 @@ instalasi mobile
 1. Download flutter SDK dari www.flutter.dev kemudian install sesuai petunjuk
 2. Instalasi code editor
 3. buka file main.dart
-4. cari file yang bernama final url = Uri.parse(
-        'publicUrlAnda/endpoint'); 
+4. cari kode yang bernama final url = Uri.parse(
+        'publicUrlAnda/endpoint');
+pastikan anda mengganti publicUrlAnda dengan url yang disediakan pada ngrok pada google colab setelah menjalankan perintah authtoken
 
 instalasi server Google Colab
 1. buka google colab notebook
